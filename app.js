@@ -18,6 +18,9 @@ app.use(
   })
 );
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.json("Hello");
+});
 
 app.use("/auth", authRoutes);
 app.use("/sale", salesRoutes);
